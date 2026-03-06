@@ -42,7 +42,7 @@ CREATE TABLE `tb_barang` (
   `stok` int NOT NULL,
   `created_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `tb_barang`
@@ -71,12 +71,12 @@ CREATE TABLE `tb_detransaksi` (
   `jenis_barang` varchar(100) NOT NULL,
   `nama_barang` varchar(100) NOT NULL,
   `harga` int NOT NULL,
-  `harga_waktu` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT 'default',
+  `harga_waktu` varchar(100) CHARACTER SET utf8mb4 DEFAULT 'default',
   `jumlah` int NOT NULL,
   `total` int NOT NULL,
   `created_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `tb_detransaksi`
@@ -110,7 +110,7 @@ CREATE TABLE `tb_histori` (
   `pengguna_id` int NOT NULL,
   `message_icon` varchar(50) NOT NULL,
   `message_date_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `tb_histori`
@@ -469,7 +469,7 @@ CREATE TABLE `tb_kategori` (
   `nama_kategori` varchar(255) DEFAULT NULL,
   `created_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `tb_kategori`
@@ -491,7 +491,7 @@ INSERT INTO `tb_kategori` (`id_kategori`, `nama_kategori`, `created_at`, `update
 CREATE TABLE `tb_pengajuan` (
   `id` int NOT NULL,
   `jenis_pinjaman` text NOT NULL,
-  `tanggal_pinjam` text CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci,
+  `tanggal_pinjam` text CHARACTER SET utf8mb4,
   `jumlah_pinjaman` text NOT NULL,
   `lama_pinjaman` text NOT NULL,
   `is_read` tinyint(1) NOT NULL DEFAULT '0',
@@ -499,7 +499,7 @@ CREATE TABLE `tb_pengajuan` (
   `status` varchar(255) DEFAULT NULL,
   `waktu_pengajuan` datetime DEFAULT CURRENT_TIMESTAMP,
   `user_id` int NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `tb_pengajuan`
@@ -673,7 +673,7 @@ CREATE TABLE `tb_riwayat_harga` (
   `harga_beli` int NOT NULL,
   `harga_jual` int NOT NULL,
   `tanggal_berlaku` date NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -686,7 +686,7 @@ CREATE TABLE `tb_satuan` (
   `nama_satuan` varchar(255) DEFAULT NULL,
   `created_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `tb_satuan`
@@ -720,7 +720,7 @@ CREATE TABLE `tb_transaksi` (
   `detail` varchar(255) DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `tb_transaksi`
